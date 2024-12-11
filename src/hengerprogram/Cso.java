@@ -14,7 +14,7 @@ public class Cso extends TomorHenger {
     public Cso(double sugar, double magassag, double fajsuly, double falvastagsag) throws Exception {
         super(sugar, magassag, fajsuly);
           if (falvastagsag <= 0) {
-            throw new Exception("A fajsúly 0-nál nagyobb szám.");
+            throw new Exception("A falvastagság 0-nál nagyobb szám.");
         }
         this.falvastagsag=falvastagsag;
     }
