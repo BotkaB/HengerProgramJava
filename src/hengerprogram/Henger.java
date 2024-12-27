@@ -36,13 +36,17 @@ public class Henger {
         return magassag;
     }
     
-    public double terfogat(){
+    public double terfogat()throws Exception {
 //        A henger térfogatát úgy számoljuk ki, hogy az alapterületének a nagyságát szorozzuk a henger magasságával
 //        Mivel a henger alapja egy kör, ezért:
 //        V=r*r*PI*magasság
         
        return Math.pow(sugar, 2)*Math.PI*magassag;  
     
+    }
+    
+     public static void hengerDarabCsokkent() {
+       hengerDarab--;
     }
     
      @Override

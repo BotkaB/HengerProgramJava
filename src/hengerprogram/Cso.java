@@ -29,12 +29,15 @@ public class Cso extends TomorHenger {
     
     
   @Override
-   public double terfogat(){
+   public double terfogat()throws Exception {
        
        //Az eredeti térfogatból ki kell vonni a "lukas részt." De a térfogat az ősben van.
        //A lukas rész köre a sugár-falvastagság. De a sugár az ősben van.
        //Innen már ugyanaz, mint a Hengerben van, de a magasság is az ősben van.
-        return super.terfogat()-(Math.pow((super.getSugar()-falvastagsag),2)*Math.PI*super.getMagassag());
+       
+       Henger segedHenger=new Henger(super.getSugar()-this.falvastagsag, super.getMagassag());
+       Henger.hengerDarabCsokkent();
+        return super.terfogat()- segedHenger.terfogat();
     }
    
     @Override

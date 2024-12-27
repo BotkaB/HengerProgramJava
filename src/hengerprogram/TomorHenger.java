@@ -29,7 +29,7 @@ public class TomorHenger extends Henger {
         return fajsuly;
     }
 
-    public double suly() {
+    public double suly()throws Exception  {
 
 //       A fajsúly (jele: γ – görög: gamma, SI mértékegysége: N / m³) az adott térfogategység súlyának mértéke. 
         return super.terfogat() * fajsuly;

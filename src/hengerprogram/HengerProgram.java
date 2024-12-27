@@ -26,7 +26,7 @@ public class HengerProgram {
         hengerek.add(new Cso(3.9, 6.7, 2.8, 4.3));
     }
 
-    private double atlagTerfogat() {
+    private double atlagTerfogat() throws Exception  {
         double osszeg = 0;
         for (Henger henger : lista()) {
             osszeg += henger.terfogat();
@@ -34,7 +34,7 @@ public class HengerProgram {
         return osszeg / Henger.getHengerDarab();
     }
 
-    private double csovekSulya() {
+    private double csovekSulya()throws Exception  {
         double suly = 0;
         for (Henger cso : lista()) {
             if (cso instanceof Cso) {
@@ -48,7 +48,7 @@ public class HengerProgram {
         return Collections.unmodifiableList(hengerek);
     }
 
-    public void run() {
+    public void run() throws Exception  {
         System.out.println("Átlag térfogat="+atlagTerfogat());
         System.out.println("Csövek súlya="+csovekSulya());
         //System.out.println("Hengerek lista:"+lista());
